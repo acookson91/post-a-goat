@@ -1,0 +1,10 @@
+
+<% if @friends.any? %>
+ <% @friends.each do |friend| %>
+   <%= friend.name %>
+   <button>Goat bomb</button>
+   <% end %>
+ <% else %>
+ <h1>You have no friends!</h1>
+ <% end %>
+<h2> <%= link_to "Add a friend", new_friend_path %> </h2>
