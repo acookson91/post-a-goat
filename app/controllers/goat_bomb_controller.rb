@@ -1,6 +1,6 @@
 class GoatBombController < ApplicationController
 
-  def send(id)
+  def send
 
   end
 end
