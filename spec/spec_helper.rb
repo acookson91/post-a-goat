@@ -1,4 +1,3 @@
-require 'sms-spec'
 require 'capybara/rspec'
 
 RSpec.configure do |config|
@@ -11,5 +10,5 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-  SmsSpec.driver = :"twilio-ruby"
+  # SmsSpec.driver = :"twilio-ruby"
 end

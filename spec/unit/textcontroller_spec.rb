@@ -1,13 +1,15 @@
 require 'spec_helper'
 
-describe TextController do
-  include SmsSpec::Helpers
-  describe "POST 'create'" do
+describe GoatBombController do
+  subject(:goatbomb) { described_class.new }
+  let(:id) { double:id }
 
-    it "sends a text message to the phone number that registered" do
-      post 'create', {:phone_number => '07498108082'}
-      open_last_text_message_for "07498108082"
-      current_text_message.should have_body ":goat:"
-    end
+  before do
+    allow(goatbomb).to receive(:send)
+  end
+
+  it 'sends a goat bomb text message' do
+    expect(goatbomb).to receive(:send).with(id)
+    goatbomb.send(id)
   end
 end
