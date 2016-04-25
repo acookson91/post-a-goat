@@ -1,4 +1,6 @@
 class FriendsController < ApplicationController
+
+before_action :authenticate_user!, :except => [:index]
   def index
     @friends = Friend.all
   end

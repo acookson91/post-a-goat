@@ -10,7 +10,7 @@ feature 'friends' do
    end
 
    scenario 'user can add a friend' do
-    visit '/'
+    sign_up
     click_link 'Add a friend'
     fill_in 'Name', with: 'Simon'
     fill_in 'Phone number', with:'0750 7404740'
