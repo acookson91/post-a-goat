@@ -11,7 +11,7 @@ class GoatBomb
     client.account.messages.create(
       :from => '+441595922048',
       :to => friend.phone_number,
-      :body => "#{friend.name} you have been goatbombed :goat: maaaaaaa"
+      :body => "#{friend.name} you have been goatbombed \u{1F410} maaaaaaa"
     )
   end
 
