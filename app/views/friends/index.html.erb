@@ -1,8 +1,8 @@
-
 <% if @friends.any? %>
  <% @friends.each do |friend| %>
    <%= friend.name %>
-   <button>Goat bomb</button>
+  <%= button_to 'Goat Bomb', friend_path(friend.id), :method => :get %>
+
    <% end %>
  <% else %>
  <h1>You have no friends!</h1>

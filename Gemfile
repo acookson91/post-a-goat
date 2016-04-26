@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'twilio-ruby'
-
+gem 'dotenv'
 group :test do
   gem 'rspec-rails'
   gem 'capybara'

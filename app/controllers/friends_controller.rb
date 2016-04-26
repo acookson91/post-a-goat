@@ -1,3 +1,4 @@
+
 class FriendsController < ApplicationController
   def index
     @friends = Friend.all
@@ -5,6 +6,12 @@ class FriendsController < ApplicationController
 
   def new
     @friend = Friend.new
+  end
+
+  def show
+    @friend = Friend.find(params[:id])
+    GoatBomb.send_text(@friend)
+    redirect_to '/'
   end
 
   def create
@@ -15,5 +22,4 @@ class FriendsController < ApplicationController
   def friend_params
     params.require(:friend).permit(:name, :phone_number)
   end
-
 end
