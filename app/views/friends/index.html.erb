@@ -1,5 +1,5 @@
-<% if @friends.any? %>
- <% @friends.each do |friend| %>
+<% if current_user && current_user.friends.any?  %>
+ <% current_user.friends.each do |friend| %>
    <%= friend.name %>
   <%= button_to 'Goat Bomb', friend_path(friend.id), :method => :get %>
 

@@ -17,7 +17,7 @@ before_action :authenticate_user!, :except => [:index]
   end
 
   def create
-    @friend = Friend.create(friend_params)
+    @friend = current_user.friends.create(friend_params)
     redirect_to '/'
   end
 
