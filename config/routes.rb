@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :friends do
-    post 'send'
+    resources :goatbomb
   end
 
   devise_for :users
