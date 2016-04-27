@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :friends do
-    resources :goatbomb
+    resources :goatbombs, :only => [:create]
   end
 
   devise_for :users

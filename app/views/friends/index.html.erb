@@ -1,7 +1,7 @@
-<% if current_user && current_user.friends.any?  %>
- <% current_user.friends.each do |friend| %>
+<% if @friends.any?  %>
+ <% @friends.each do |friend| %>
    <%= friend.name %>
-  <%= button_to 'Goat Bomb', friend_path(friend.id), :method => :get %>
+  <%= button_to 'Goat Bomb', friend_goatbombs_path(friend.id), :method => :post %>
 
    <% end %>
  <% else %>
