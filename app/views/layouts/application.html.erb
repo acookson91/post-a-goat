@@ -1,26 +1,27 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>PostAGoat</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+ <head>
+   <title>Post a Goat</title>
+   <%= stylesheet_link_tag    'application', media: 'all' %>
+   <%= javascript_include_tag 'application' %>
+   <%= csrf_meta_tags %>
+ </head>
+ <body ng-app="goatApp">
+   <div class="ui-view"></div>
 
-<%if user_signed_in? %>
-  <%= current_user.username %>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Log in", new_user_session_path %>
-  <%= link_to "Sign up", new_user_registration_path %>
-<% end %>
-
-<!-- gem 'devise_token_auth' >= 0.1.32.beta9
-rak_Cors -->
-
-<!-- cross origin requests -->
-<%= yield %>
-
-</body>
+  <script type="text/ng-template" id="/home.html">
+    <div class="page-header">
+       <h1>Post a Goat</h1>
+     </div>
+    <div>
+     <div ng-repeat="friend in friends">
+       Name: {{friend.name}} Phone: {{friend.phone_number}}
+     </div>
+     <form ng-submit="addFriend()">
+       <input type="text" ng-model="name" placeholder="Name"/>
+       <input type="text"  ng-model="phone_number" placeholder="Phone Number" />
+       <input type="submit" value="Add Friend"/>
+     </form>
+    </div>
+  </script>
+ </body>
 </html>
