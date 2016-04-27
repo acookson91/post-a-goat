@@ -1,0 +1,13 @@
+<div class="page-header">
+   <h1>Post a Goat</h1>
+ </div>
+<div>
+ <div ng-repeat="friend in friends">
+   Name: {{friend.name}} Phone: {{friend.phone_number}}
+ </div>
+ <form ng-submit="addFriend()">
+   <input type="text" ng-model="name" placeholder="Name"/>
+   <input type="text"  ng-model="phone_number" placeholder="Phone Number" />
+   <input type="submit" value="Add Friend"/>
+ </form>
+</div>

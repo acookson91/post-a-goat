@@ -13,7 +13,7 @@ gem 'dotenv'
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
-  # gem 'sms-spec'
+  gem 'angular-rails-templates'
 end
 
 group :development, :test do
