@@ -6,7 +6,7 @@ angular.module('goatApp').controller('MainCtrl', ['$scope', 'friends', function(
     if(!$scope.name || $scope.phone_number === '') {return;}
     friends.create({
       name: $scope.name,
-      phone_number: $scope.link,
+      phone_number: $scope.phone_number,
     });
     $scope.name = '';
     $scope.phone_number ='';

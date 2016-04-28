@@ -1,7 +1,7 @@
 class FriendsController < ApplicationController
 
   before_action :authenticate_user!, :except => [:index]
-  
+
   respond_to :json
 
   def index
@@ -20,7 +20,7 @@ class FriendsController < ApplicationController
   # end
 
   def create
-    respond_with Friend.create(post_params)
+    respond_with Friend.create(friend_params)
     # Simon
     # @friend = current_user.friends.create(friend_params)
     # redirect_to '/'
