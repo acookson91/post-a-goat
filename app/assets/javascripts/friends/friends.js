@@ -1,4 +1,4 @@
-angular.module('goatApp').factory('friends', '$http', [function($http){
+angular.module('goatApp').factory('friends',['$http', function($http){
 
   var o = {
     friends: []
@@ -11,7 +11,8 @@ angular.module('goatApp').factory('friends', '$http', [function($http){
   };
 
   o.create = function(friend) {
-    return $http.post('/friends.json', friend).success(function(data){
+    return $http.post('/friends', friend).success(function(data){
+      console.log(data)
       o.friends.push(data);
     });
   };
