@@ -1,6 +1,6 @@
 class GoatbombsController < ApplicationController
 
-  def create 
+  def create
     @friend = Friend.find(params[:friend_id])
     GoatBomb.send_text(@friend)
     redirect_to '/'
