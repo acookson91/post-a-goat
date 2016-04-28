@@ -1,4 +1,4 @@
-angular.module('goatApp').controller('MainCtrl', ['$scope', 'friends', function($scope, friends){
+angular.module('goatApp').controller('MainCtrl', ['$scope', 'friends', 'bombs', function($scope, friends, bombs){
 
   $scope.friends = friends.friends;
 
@@ -11,4 +11,11 @@ angular.module('goatApp').controller('MainCtrl', ['$scope', 'friends', function(
     $scope.name = '';
     $scope.phone_number ='';
   };
+
+  $scope.sendMessage = function(friend){
+    console.log(friend)
+    bombs.create(friend);
+
+  }
+
 }]);

@@ -4,6 +4,7 @@
 <div>
  <div ng-repeat="friend in friends">
    Name: {{friend.name}} Phone: {{friend.phone_number}}
+   <button ng-model="friendId" ng-click="sendMessage(friend.id)">Goat Bomb</button>
  </div>
  <form ng-submit="addFriend()">
    <input type="text" ng-model="name" placeholder="Name"/>

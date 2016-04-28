@@ -22,11 +22,12 @@ describe('E2E: Main page', function() {
     email.sendKeys('test@test.com');
     username.sendKeys('tester');
     password.sendKeys('test1234');
-
     element(by.css('input[type=submit]')).click();
-
     expect(element(by.id('welcome')).isPresent()).toBeTruthy();
   });
 
-
+  it('should allow user to click goatbomb', function(){
+    element(by.id("goat-bomb")).click();
+    expect(element(by.id('bombed'))).toEqual('Bombed Yo');
+  })
 });
