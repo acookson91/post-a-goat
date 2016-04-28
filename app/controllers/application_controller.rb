@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+
   protect_from_forgery with: :exception
+
+  # respond_to :json
 
   protected
 
@@ -9,7 +12,5 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up)            { |u| u.permit(:username, :email, :password, :password_confirmation) }
     devise_parameter_sanitizer.for(:sign_in)            << :username
     devise_parameter_sanitizer.for(:account_update)     << :username
-
   end
 end
-

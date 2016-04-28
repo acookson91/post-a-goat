@@ -1,0 +1,21 @@
+{
+  "name": "post-a-goat",
+  "homepage": "https://github.com/acookson91/post-a-goat",
+  "authors": [
+    "Andrew Cookson <acookson91@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18"
+  }
+}
