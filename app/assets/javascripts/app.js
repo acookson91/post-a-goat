@@ -1,4 +1,4 @@
-var app = angular.module('goatApp', ['ui.router', 'templates']);
+var app = angular.module('goatApp', ['ui.router', 'templates', 'Devise']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
