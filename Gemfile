@@ -12,7 +12,6 @@ gem 'twilio-ruby'
 gem 'dotenv'
 gem 'angular-rails-templates'
 gem 'angular_rails_csrf'
-gem 'airborne'
 
 group :test do
   gem 'rspec-rails'

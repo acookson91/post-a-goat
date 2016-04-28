@@ -6,10 +6,16 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
 require 'unit/unit_helper.rb'
+require 'support/controller_helpers'
+
 
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+
+  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::TestHelpers, type: :view
+  config.include ControllerHelpers, :type => :controller
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
