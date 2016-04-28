@@ -4,8 +4,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/home',
-      templateUrl: 'home/_home.html',
-      controller: 'MainCtrl'
+      templateUrl: 'friends/_home.html',
+      controller: 'MainCtrl',
+      resolve: {
+        friendPromise: ['friends', function(friends){
+          console.log(friends.getAll());
+          return friends.getAll();
+        }]
+      }
     });
   $urlRouterProvider.otherwise('home');
 });

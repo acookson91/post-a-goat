@@ -4,7 +4,10 @@ angular.module('goatApp').controller('MainCtrl', ['$scope', 'friends', function(
 
   $scope.addFriend = function(){
     if(!$scope.name || $scope.phone_number === '') {return;}
-    $scope.friends.push({name: $scope.name, phone_number: $scope.phone_number});
+    friends.create({
+      name: $scope.name,
+      phone_number: $scope.link,
+    });
     $scope.name = '';
     $scope.phone_number ='';
   };
