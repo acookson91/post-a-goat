@@ -5,30 +5,16 @@ class FriendsController < ApplicationController
   respond_to :json
 
   def index
-    # added by the wonder twins
-    # respond_with Friend.all
-
-    # Simon
-    # current_user ? @friends = current_user.friends : @friends = []
-    @friends = Friend.all
+    current_user ? @friends = current_user.friends : @friends = []
     render :json => @friends
   end
 
-  # SOS
-  # def new
-  #   @friend = Friend.new
-  # end
-
   def create
-    respond_with Friend.create(friend_params)
-    # Simon
-    # @friend = current_user.friends.create(friend_params)
-    # redirect_to '/'
+    respond_with current_user.friends.create(friend_params)
   end
 
-  # SOS
   def show
-    respond_with Friend.find(params[:id])
+    respond_with current_user.friends.find(params[:id])
   end
 
   private
