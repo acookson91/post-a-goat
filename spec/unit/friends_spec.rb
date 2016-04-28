@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 describe FriendsController, "testing friends" do
   before(:each) do
     @sachin = User.create(email: "sachin@mail.com", username: "Sachin", password: "12345678")
@@ -23,15 +22,4 @@ describe FriendsController, "testing friends" do
     post '/friends.json', friend:params
     expect(@sachin.friends.length).to eq(2)
   end
-
-
-
-
-
-
-
-
-
-
-
 end
