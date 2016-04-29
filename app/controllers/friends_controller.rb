@@ -5,7 +5,6 @@ class FriendsController < ApplicationController
   respond_to :json
 
   def index
-    # @friends = Friend.all
     current_user ? @friends = current_user.friends : @friends = []
     render :json => @friends
   end
@@ -15,7 +14,13 @@ class FriendsController < ApplicationController
   end
 
   def show
-    respond_with current_user.friends.find(params[:id])
+    @friend = current_user.friends.find(params[:id])
+    render :json => @friend
+  end
+
+  def destroy
+    respond_with @friend = current_user.friends.find(params[:id])
+    @friend.destroy
   end
 
   private
