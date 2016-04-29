@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'twilio-ruby'
 gem 'dotenv'
 gem 'angular-rails-templates'
+gem 'protractor-rails'
 
 
 group :test do
