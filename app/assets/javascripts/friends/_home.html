@@ -1,10 +1,13 @@
-<div class="page-header">
+<div class="page-header" id="home">
    <h1>Post a Goat</h1>
  </div>
 <div>
  <div ng-repeat="friend in friends">
    Name: {{friend.name}} Phone: {{friend.phone_number}}
+   <button id="goat-bomb" ng-model="friendId" ng-click="sendMessage(friend.id)">Goat Bomb</button>
  </div>
+   <div class='message' ng-hide="AlertMessage">Goat BOMBED YEAHHHHHH BUDDY</div>
+
  <form ng-submit="addFriend()">
    <input type="text" ng-model="name" placeholder="Name"/>
    <input type="text"  ng-model="phone_number" placeholder="Phone Number" />

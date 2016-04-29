@@ -1,9 +1,11 @@
 class GoatbombsController < ApplicationController
 
+  respond_to :json
+
   def create
-    @friend = Friend.find(params[:friend_id])
+    puts params
+    respond_with @friend = Friend.find(params[:friend_id])
     GoatBomb.send_text(@friend)
-    redirect_to '/'
   end
 
 end
