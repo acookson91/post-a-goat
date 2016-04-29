@@ -5,6 +5,7 @@ class FriendsController < ApplicationController
   respond_to :json
 
   def index
+    # @friends = Friend.all
     current_user ? @friends = current_user.friends : @friends = []
     render :json => @friends
   end
