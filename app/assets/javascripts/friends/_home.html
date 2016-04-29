@@ -6,6 +6,8 @@
    Name: {{friend.name}} Phone: {{friend.phone_number}}
    <button ng-model="friendId" ng-click="sendMessage(friend.id)">Goat Bomb</button>
  </div>
+   <div ng-hide="AlertMessage">Goat BOMBED YEAHHHHHH BUDDY</div>  
+
  <form ng-submit="addFriend()">
    <input type="text" ng-model="name" placeholder="Name"/>
    <input type="text"  ng-model="phone_number" placeholder="Phone Number" />

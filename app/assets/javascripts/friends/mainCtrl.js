@@ -1,6 +1,7 @@
-angular.module('goatApp').controller('MainCtrl', ['$scope', 'friends', 'bombs', function($scope, friends, bombs){
+angular.module('goatApp').controller('MainCtrl', ['$scope', 'friends', 'bombs', '$timeout', function($scope, friends, bombs, $timeout){
 
   $scope.friends = friends.friends;
+  $scope.AlertMessage = true;
 
   $scope.addFriend = function(){
     if(!$scope.name || $scope.phone_number === '') {return;}
@@ -13,9 +14,9 @@ angular.module('goatApp').controller('MainCtrl', ['$scope', 'friends', 'bombs', 
   };
 
   $scope.sendMessage = function(friend){
-    console.log(friend)
     bombs.create(friend);
-
+    $scope.AlertMessage=false;
+    $timeout(function () { $scope.AlertMessage = true; }, 3000);
   }
 
 }]);
