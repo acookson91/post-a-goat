@@ -27,7 +27,8 @@ describe('E2E: Main page', function() {
   });
 
   it('should allow user to click goatbomb', function(){
-    element(by.id("goat-bomb")).click();
-    expect(element(by.id('bombed'))).toEqual('Bombed Yo');
-  })
+    $("#goat-bomb")).click();
+    expect($('.message').isDisplayed()).toBeTruthy();
+  });
+
 });
