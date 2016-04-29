@@ -16,10 +16,6 @@ RSpec.configure do |config|
 
   include Warden::Test::Helpers
   config.include Rails.application.routes.url_helpers
-  # include Devise::TestHelpers
-  # config.include Devise::TestHelpers, type: :controller
-  # config.include Devise::TestHelpers, type: :view
-
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
