@@ -1,5 +1,14 @@
-# require 'rails_helper'
-#
-# describe GoatBombController do
-#
-# end
+require 'rails_helper'
+
+describe Goatbomb do
+  let(:twilio)
+
+
+
+  it 'sends a goatbomb text' do
+
+  end
+
+
+
+end
