@@ -11,7 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'twilio-ruby'
 gem 'dotenv'
 gem 'angular-rails-templates'
-gem 'angular_rails_csrf'
+
 
 group :test do
   gem 'rspec-rails'

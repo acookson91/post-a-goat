@@ -9,10 +9,10 @@ angular.module('goatApp').factory('bombs',['$http', function($http){
     });
   };
 
-  o.message = function(message) {
-    console.log(message);
-    $('.message').val(message);
-  }
+  // o.message = function(message) {
+  //   console.log(message);
+  //   $('.message').val(message);
+  // }
 
   return o;
 }]);
