@@ -1,3 +1,27 @@
+Post a Goat
+==================
+
+ Installation Instructions
+ ---------
+
+ To install the takeaway software you must follow these Instructions.
+
+ ```
+ $ git clone https://github.com/acookson91/post-a-goat.git
+ $ cd post-a-goat
+ ```
+ 
+ Instructions
+-------
+
+Post a goat is an application that allows you to send a goat text message to any of your friends at the click of a button. 
+
+You must follow three steps to send a goat:
+
+1. Register yourself as a user
+2. Add your friends/enemies to your post-a-goat list
+3. Click Post-a-Goat button!
+
 # User Stories
 ## MVP stories (beta)
 ```
