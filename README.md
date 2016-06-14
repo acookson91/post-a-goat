@@ -1,8 +1,9 @@
 Post a Goat
 ==================
 
- Installation Instructions
- ---------
+**Task to build a app that sends a goat text message to any of your registered friends.**
+
+ ## Installation Instructions
 
  To install the takeaway software you must follow these Instructions.
 
@@ -11,8 +12,15 @@ Post a Goat
  $ cd post-a-goat
  ```
  
- Instructions
--------
+ ## Design approach and Challenges
+ 
+ We first wanted to build our MVP in Ruby on Rails using the twillio API to send texts. After our first day we can an MVP runing without users being registered. 
+ 
+ After completing this we decided it would be nice to try and using angularJS for our frontend and a Rails APi to pass data across. This would also allow users to send texts and add contacts without the page refreshing. 
+ 
+ Being the first time that we have worked in angularJS there were the problems of rails CSRF receiving information posted to it from our angular app. 
+ 
+ ## Instructions
 
 Post a goat is an application that allows you to send a goat text message to any of your friends at the click of a button. 
 
